@@ -1,7 +1,7 @@
 class Sleeper
   @queue = :sleep
 
-  def sleep.perform(seconds)
+  def self.perform(seconds)
     sleep(seconds)
   end
 end
