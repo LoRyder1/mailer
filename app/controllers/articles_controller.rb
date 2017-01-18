@@ -6,6 +6,10 @@ class ArticlesController < ApplicationController
     if @article.save
       sleep(5)
 
-      flash[:notice] = "Article"
+      flash[:notice] = "Article was created."
+      redirect_to article_path
+    else
+      render :new
+    end
   end
 end
